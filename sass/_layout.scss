@@ -26,10 +26,15 @@
 
     // shorthand prop
     flex: 0 0 18%;
+    display: flex;
+    // change direction of main axis to top -> bottom
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
     background-color: orangered;
+    height: 80rem;
 
     flex: 1;
 }
