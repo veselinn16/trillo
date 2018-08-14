@@ -13,6 +13,13 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-smallest) {
+        // place it last
+        order: 1;
+        // occupy all the width in order to move onto a new line
+        flex: 0 0 100%;
+    }
+
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -24,7 +31,11 @@
         width: 90%;
         transition: all .2s;
         // in order for button to be on top of input
-        margin-right: -3.5rem; 
+        margin-right: -3.5rem;
+        
+        @media only screen and (max-width: $bp-smallest) {
+            width: 100%;
+        }
 
         &:focus {
             outline: none;
@@ -392,15 +403,18 @@
         width: 1rem;
         margin-right: .7rem;
         // for older browsers
-        // background-image: url(../img/chevron-thin-right.svg);
-        // background-size: cover;
+        background-image: url(../img/chevron-thin-right.svg);
+        background-size: cover;
 
         // for new browsers - a mask
-        background-color: var(--color-primary);
-        -webkit-mask-image: url(../img/chevron-thin-right.svg);
-        -webkit-mask-size: cover;
-        mask-image: url(../img/chevron-thin-right.svg);
-        mask-size: cover;
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: var(--color-primary);
+            -webkit-mask-image: url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+            background-image: none;
+        }        
     }
 }
 
