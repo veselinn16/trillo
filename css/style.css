@@ -147,7 +147,8 @@ body {
   @media only screen and (max-width: 31.25em) {
     .search {
       order: 1;
-      flex: 0 0 100%; } }
+      flex: 0 0 100%;
+      background-color: var(--color-grey-light-2); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -323,9 +324,18 @@ body {
   .overview__location {
     font-size: 1.2rem;
     display: flex;
-    vertical-align: center; }
+    vertical-align: center;
+    align-items: center;
+    align-self: stretch; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__location {
+        padding-left: 2rem; } }
   .overview__icon-location {
     margin-right: .5rem; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__icon-location {
+        width: 2.5rem;
+        height: 2.5rem; } }
   .overview__rating {
     background-color: var(--color-primary);
     margin-left: 3rem;
@@ -339,6 +349,9 @@ body {
     @media only screen and (max-width: 37.5em) {
       .overview__rating {
         padding: 0 1.5rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .overview__rating {
+        margin-left: 1rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
@@ -348,10 +361,14 @@ body {
         font-size: 1.8rem; } }
   .overview__rating-count {
     font-size: .8rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center; }
     @media only screen and (max-width: 37.5em) {
       .overview__rating-count {
         font-size: .3rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .overview__rating-count {
+        font-size: 1rem; } }
 
 .btn-inline {
   border: none;
@@ -462,6 +479,9 @@ body {
     .review__user-date {
       font-size: 1rem;
       color: var(--color-grey-dark-3); }
+      @media only screen and (max-width: 31.25em) {
+        .review__user-date {
+          font-size: 1.2rem; } }
     .review__user-rating {
       color: var(--color-primary);
       font-size: 2.2rem;
@@ -494,6 +514,10 @@ body {
     margin-bottom: 2.5rem;
     text-transform: uppercase;
     margin-bottom: 2.5rem; }
+    @media only screen and (max-width: 31.25em) {
+      .cta__book-now {
+        font-size: 1.3rem;
+        font-weight: 400; } }
 
 .btn {
   font-size: 1.5rem;

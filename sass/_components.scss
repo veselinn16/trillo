@@ -12,12 +12,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
     @media only screen and (max-width: $bp-smallest) {
         // place it last
         order: 1;
         // occupy all the width in order to move onto a new line
         flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
     }
 
     &__input {
@@ -283,10 +285,21 @@
         font-size: 1.2rem;
         display: flex;
         vertical-align: center;
+        align-items: center;
+        align-self: stretch;
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding-left: 2rem;
+        }
     }
 
     &__icon-location {
         margin-right: .5rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
     }
 
     &__rating {
@@ -306,6 +319,10 @@
         @media only screen and (max-width: $bp-small) {
             padding: 0 1.5rem;
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin-left: 1rem;
+        }
     }
 
     &__rating-average {
@@ -321,9 +338,14 @@
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
+        text-align: center;
 
         @media only screen and (max-width: $bp-small) {
             font-size: .3rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1rem;
         }
     }
 }
@@ -490,6 +512,10 @@
         &-date {
             font-size: 1rem;
             color: var(--color-grey-dark-3);
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 1.2rem;
+            }
         }
 
         &-rating {
@@ -534,6 +560,11 @@
         margin-bottom: 2.5rem;
         text-transform: uppercase;
         margin-bottom: 2.5rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
     }
 }
 
